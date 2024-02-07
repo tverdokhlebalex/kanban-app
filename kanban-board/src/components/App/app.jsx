@@ -1,7 +1,7 @@
 import React, { useState, useEffect, createContext } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Main from '../Main/Main';
-import TaskDetails from '../TaskDetails/TaskDetales'; 
+import TaskDetails from '../TaskDetails/TaskDetails'; 
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import styles from './App.module.scss'; 

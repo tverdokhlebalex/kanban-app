@@ -1,0 +1,60 @@
+@import "./../../configcss";
+
+
+.userMenu {
+    display: flex;
+    position: relative;
+    align-items: center;
+    cursor: pointer;
+
+  
+    .userIcon {
+      display: flex;
+      img {
+        display: block;
+        margin-right: 6px;
+      }
+    }
+  
+    .dropdownMenu {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      z-index: 1;
+      background-color:$color-light; 
+      min-width: 134px;
+      box-shadow: 4px 4px 16px rgba(0,0,0,.1);
+      padding: 4px 0;
+      border-radius: 5px;
+      box-sizing: border-box;
+      margin-top: 12px;
+      ::after {
+        border: 8px solid transparent;
+        border-bottom-color: #fff;
+        color: #fff;
+        content: "";
+        font-size: 17px;
+        position: absolute;
+        right: 48px;
+        top: -16px;
+      }
+  
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+  
+        li {
+          padding: 7px 7px; 
+          list-style: none;
+          color: $color-dark; 
+          a {
+            text-decoration: none;
+          }
+          &:hover {
+            background-color: #f6f6f6; 
+          }
+        }
+      }
+    }
+  }

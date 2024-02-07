@@ -1,0 +1,44 @@
+@import "./../../configcss";
+column {
+    background-color: #ebecf0;
+    border-radius: 10px;
+    box-shadow: 4px 4px 16px rgba(0,0,0,.2);
+    display: flex;
+    flex: 1 1 22%;
+    flex-direction: column;
+    max-height: 100%;
+    overflow: auto;
+    padding: 12px;
+  }
+  
+  .columnTitle {
+    font-size: 1.2em; // Больший размер для заголовка
+    margin-bottom: 15px; // Отступ снизу для заголовка
+    text-align: center; // Центрирование текста заголовка
+  }
+  
+  .cardsContainer {
+    margin-bottom: 10px; // Отступ снизу контейнера карточек
+  }
+  
+  .newTaskInput {
+    width: 100%; // Полная ширина
+    padding: 8px; // Внутренние отступы
+    margin-bottom: 10px; // Отступ снизу
+    border: 1px solid #ccc; // Граница
+    border-radius: 4px; // Скругленные углы
+  }
+  
+  .submitButton {
+    width: 100%; // Полная ширина
+    background-color: #007bff; // Синий фон
+    color: white; // Белый текст
+    border: none; // Без границы
+    padding: 10px; // Внутренние отступы
+    border-radius: 4px; // Скругленные углы
+    cursor: pointer; // Курсор в виде указателя
+  
+    &:hover {
+      background-color: #0056b3; // Темно-синий фон при наведении
+    }
+  }

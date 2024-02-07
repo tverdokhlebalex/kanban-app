@@ -1,0 +1,21 @@
+@import "./../../configcss";
+
+.header{
+    justify-content: space-between;
+	background-color: $main-background-color;
+	color: $color-light;
+	display: flex;
+	align-items: center;
+	padding: 0 14px 0 16px;
+	height: 55px;
+    @media all and (max-width: 576px) {
+        justify-content: end;
+        background-color: $body-background-color;
+      }
+}
+.title{
+	@media all and (max-width: 576px) {
+			display: none;
+		}
+}
+
