@@ -1,50 +1,37 @@
-import React, { useState, useEffect, createContext } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Main from '../Main/Main';
-import TaskDetails from '../TaskDetails/TaskDetails';
-import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
-import styles from './App.module.scss'; 
+import { useState, useEffect, createContext } from "react";
+import { HashRouter as Router } from "react-router-dom";
+import Header from "../Header/Header";
+import Main from "../Main/Main";
+import Footer from "../Footer/Footer";
+import css from "./App.module.scss";
+import data_mock from "../../mock.json";
 
-export const KanbanContext = createContext({});
 
-const App = () => {
-  const [kanbanData, setKanbanData] = useState({
-    Backlog: [],
-    Ready: [],
-    InProgress: [],
-    Finished: []
-  });
-  const [isDataInitialized, setIsDataInitialized] = useState(false);
+export const AppContext = createContext(null);
+
+function App() {
+  const data_tasks =
+    JSON.parse(window.localStorage.getItem("kanban-tasks")) || data_mock;
+  const [tasks, setTasks] = useState(data_tasks);
+  const [availableSave, setAvailableSave] = useState(true);
 
   useEffect(() => {
-    const loadedData = JSON.parse(localStorage.getItem('kanbanData'));
-    if (loadedData) {
-      setKanbanData(loadedData);
+    if (availableSave) {
+      window.localStorage.setItem("kanban-tasks", JSON.stringify(tasks));
     }
-    setIsDataInitialized(true);
-  }, []);
-
-  useEffect(() => {
-    if (isDataInitialized) {
-      localStorage.setItem('kanbanData', JSON.stringify(kanbanData));
-    }
-  }, [kanbanData, isDataInitialized]);
+  }, [tasks, availableSave]);
 
   return (
     <Router>
-      <div className={styles.app}>
-        <Header />
-        <KanbanContext.Provider value={{ kanbanData, setKanbanData }}>
-          <Routes>
-            <Route path="/" element={<Main />} />
-            <Route path="/task/:id" element={<TaskDetails />} />
-          </Routes>
-        </KanbanContext.Provider>
-        <Footer />
-      </div>
+      <AppContext.Provider value={{ tasks, setTasks, setAvailableSave }}>
+        <div className={css.wrapper}>
+          <Header />
+          <Main tasks={tasks} setTasks={setTasks} /> 
+          <Footer />
+        </div>
+      </AppContext.Provider>
     </Router>
   );
-};
+}
 
 export default App;

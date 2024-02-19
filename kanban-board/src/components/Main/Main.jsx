@@ -1,19 +1,23 @@
-import React, { useContext } from 'react';
-import { KanbanContext } from '../App/app'; 
-import Column from '../Column/Column';
-import styles from './Main.module.scss';
+import css from "./Main.module.scss";
+import { Routes, Route } from "react-router-dom";
+import Board from "../Board/Board";
+import DetailTask from "../DetailTask/DetailTask";
 
-const Main = () => {
-  const { kanbanData } = useContext(KanbanContext);
+const Main = ({ tasks, setTasks }) => {
+  const display = (Component, propsValue) => (
+    <div className={css.wrapper}>
+      <div className={css.board}>
+        <Component {...propsValue} />
+      </div>
+    </div>
+  );
 
   return (
-    <main className={styles.main}>
-      {Object.entries(kanbanData).map(([columnName, tasks]) => (
-        <Column key={columnName} name={columnName} tasks={tasks} />
-      ))}
-    </main>
+    <Routes>
+      <Route path="/" element={display(Board, { tasks, setTasks })} />
+      <Route path="task/:id" element={display(DetailTask, { tasks, setTasks })} />
+    </Routes>
   );
 };
 
 export default Main;
-
