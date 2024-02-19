@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { LIST_TYPES } from "../config";
 import css from "./List.module.scss";
-import { getColor, getIcon } from "../utils";
+import { getIcon } from "../utils";
 import FormAddNewTask from "./../forms/FormAddNewTask";
 import SectionTasks from "./../section/SectionTasks";
 import Button from "./../button/Button";
@@ -86,7 +86,7 @@ const List = (props) => {
 
   const buttonBacklog = (
     <Button
-      textBtn={["+ New task", "Submit"]}
+      textBtn={["+ Add task", "Submit"]}
       styleBtn={"light"}
       handleBtn={handleButtonBacklog}
       enabled={true}
@@ -136,9 +136,9 @@ const List = (props) => {
       <div className={css.tasks__block}>
         <h2
           className={css.tasks__title}
-          style={{ backgroundColor: getColor(type) }}
+
         >
-          {getIcon(type)}&nbsp;{title}
+        {title}
         </h2>
         <div className={css.tasks__wrap}>{renderListTasks}</div>
         {type === LIST_TYPES.BACKLOG && isFormVisible && formBacklog}

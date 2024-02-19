@@ -19,7 +19,7 @@ const TaskDetail = (props) => {
   const taskFind = tasks.find((task) => task.id === params.id);
 
   useEffect(() => {
-    // Перемещение курсора в конец строки при focus()
+   
     if (textareaRef.current) {
       textareaRef.current.selectionStart = textareaRef.current.value.length;
       textareaRef.current.selectionEnd = textareaRef.current.value.length;
@@ -105,7 +105,6 @@ const TaskDetail = (props) => {
     <div className={css.task__textarea_wrap}>
       <textarea
         ref={textareaRef}
-        // autoFocus
         className={clsx(css.task__info, {
           [css.task__info_warning]: !taskDetail.description,
         })}
@@ -157,13 +156,6 @@ const TaskDetail = (props) => {
             enabled={isEdit && !taskDetail.title.trim() ? false : true}
             isItemVisible={isEdit}
           />
-          {/* <button
-            type="button"
-            className={css.task__trash}
-            onClick={handleTrash}
-          >
-            {getIcon("trash")}
-          </button> */}
           <Button
             textBtn={["", ""]}
             styleBtn={"trash"}

@@ -1,3 +1,23 @@
+# Проект «Канбан-доска» React.JS
+Канбан-доска имеет 4 блока с задачами:
+
+ - Backlog (задачи, которые требуют уточнения перед тем, как брать их в работу);
+ - Ready (задачи, которые могут быть взяты в работу);
+ - In progress (задачи, которые уже в работе);
+ - Finished (законченные задачи).
+
+
+
+### Технологии:
+
+- HTML
+- CSS
+- SCSS
+- React.js
+- JS
+  
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

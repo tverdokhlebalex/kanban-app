@@ -58,7 +58,6 @@
 		left: 0;
 	}
 	&__alert_warning {
-		color: $color-text-warning;
 		font-size: 11px;
 		position: absolute;
 		bottom: -18px;
@@ -83,7 +82,7 @@
 	}
 	&__info {
 		overflow: auto;
-		max-width: 621px;
+		max-width: 100%;
 		height: calc(100vh - 325px);
 		margin-bottom: 20px;
 		margin-top: 0;
@@ -91,11 +90,7 @@
 		box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.1);
 		border-radius: 15px;	
 		white-space: pre-line;
-		&_warning {
-			border: 1px solid $color-warning;
-			outline-color: $color-warning;
-
-			}
+		
 		
 		&_error {
 			border: 1px solid $color-error;

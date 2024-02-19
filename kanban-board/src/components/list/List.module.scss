@@ -17,12 +17,12 @@
 	}
 
 	&__title {
-		font-size: $text-regular-size;
-		font-weight: 700;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 21px;
 		margin: 0 0 15px;
-		background-color: $color-light-gray;
+		background-color: $color-column-gray;
 		padding: 7px 9px 7px 8px;
-		border-radius: 5px;
 	}
 
 	&__wrap {
