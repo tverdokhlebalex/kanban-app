@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.476e7811.css",
-    "main.js": "/static/js/main.1df2444d.js",
-    "static/media/user-avatar.svg": "/static/media/user-avatar.2703af555bef769c27a4f914f1dfe285.svg",
-    "index.html": "/index.html",
-    "static/media/Close.svg": "/static/media/Close.c2dc82bc07473b92e558539849ed092b.svg",
-    "static/media/arrow-up.svg": "/static/media/arrow-up.0bdd753114a7075f4da59e76fe30f326.svg",
-    "static/media/arrow-down.svg": "/static/media/arrow-down.499a81f7058420ec4c251b760054534d.svg",
-    "main.476e7811.css.map": "/static/css/main.476e7811.css.map",
-    "main.1df2444d.js.map": "/static/js/main.1df2444d.js.map"
+    "main.css": "/kanban-app/static/css/main.476e7811.css",
+    "main.js": "/kanban-app/static/js/main.fece4596.js",
+    "static/media/user-avatar.svg": "/kanban-app/static/media/user-avatar.2703af555bef769c27a4f914f1dfe285.svg",
+    "index.html": "/kanban-app/index.html",
+    "static/media/Close.svg": "/kanban-app/static/media/Close.c2dc82bc07473b92e558539849ed092b.svg",
+    "static/media/arrow-up.svg": "/kanban-app/static/media/arrow-up.0bdd753114a7075f4da59e76fe30f326.svg",
+    "static/media/arrow-down.svg": "/kanban-app/static/media/arrow-down.499a81f7058420ec4c251b760054534d.svg",
+    "main.476e7811.css.map": "/kanban-app/static/css/main.476e7811.css.map",
+    "main.fece4596.js.map": "/kanban-app/static/js/main.fece4596.js.map"
   },
   "entrypoints": [
     "static/css/main.476e7811.css",
-    "static/js/main.1df2444d.js"
+    "static/js/main.fece4596.js"
   ]
 }
